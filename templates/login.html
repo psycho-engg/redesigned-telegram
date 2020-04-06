@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python</title>
+</head>
+<body> 
+<form action="{% url 'thanx' %}" >
+    {% csrf_token %}
+     <input type="text" name="topic_name" placeholder="Topic Name">
+    <br></br>
+    <textarea  cols="100" rows="20" name="article" >Enter Text</textarea>
+    <br></br>
+    <button type="submit">Submit</button>
+    {{msg}}
+</form>
+<br></br>
+<a href="{% url 'home' %}" >Click here to go Home</a>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python</title>
+</head>
+<body>
+
+    <a href="{% url 'home' %}"> Click here to go Home</a>
+     <br></br>
+    <h2>Python Codes You must TRY.... </h2>
+
+    <br></br>
+    <pre>
+        Q1. L is a list defined as L= [11, 12, 13, 14].
+        (i)WAP to add 50 and 60 to L.
+         Sol:>>> L.append(50)
+             >>> L.append(60)
+        (ii)WAP to remove 11 and 13from L.
+         Sol:>>> L.remove(11)
+             >>> L.remove(13)
+        (iii)WAP to sort L in ascending order.
+         Sol:>>> L.sort()
+
+        (iv)WAP to sort L in descending order.
+         Sol:>>> L.sort(reverse=True)
+                    OR
+             >>> L.sort()
+             >>> L.reverse()
+        (v)    WAP to search for 13 in L.
+         Sol:>>> 13 in L # this will return Boolean expression
+        “OR”
+
+            l=[11,12,13,14]
+        num=int(input("Enter number to find:"))
+        f=0
+        for a in range(4):
+            if num==l[a]:
+                f=1
+                break
+            else:
+                f=0
+        if f==1:
+            print("found")
+        else:
+            print("Not found")
+        (vi)WAP to count the number of elements present in L.
+         Sol:
+            >>>  len(L) #return length of L
+        (vii)WAP to sum all the elements in L.
+         Sol:
+            >>>  sum(L)	#return sum of all elements in L
+        (viii)WAP to sum all ODD numbers in L.
+         Sol:
+            >>>   l=[11,12,13,14]
+        num=0
+        for x in range(4):
+            if l[x]%2!=0:
+                num = num + l[x]
+        print(num)
+        (ix)WAP to sum all EVEN numbers in L.
+         Sol:
+              >>>    l=[11,12,13,14]
+        num=0
+        for x in range(4):
+            if l[x]%2==0:
+                num=num+l[x]
+        print(num)
+        (x) 	WAP to sum all PRIME numbers in L.
+              >>>	l= [11, 12, 13, 14]
+        s=0
+        for i in range(4):
+             for x in range(2,(int(l[i]/2)+1)):
+               S2 is a set defined as S2= {40, 50, 60, 70, 80, 90}.
+        (i) 	WAP to add 55 and 66 in Set S1.
+        >>> S1.add(55)
+        >>> S1.add(66)
+        (ii)WAP to remove 10 and 30 from Set S1.
+        >>> S1.remove(10)
+        >>> S1.remove(30)
+        (iii)WAP to check whether 40 is present in S1.
+        >>> 40 in S #return Boolean expression(True and False)
+        (iv)WAP to find the union between S1 and S2.
+        >>> S1.union(S2)  OR  S1 | S2
+        (v)    WAP to find the intersection between S1 and S2.
+            >>> S1.intersection(S2)   OR  S1 & S2
+        (vi)WAP to find the S1 - S2.
+        >>> S1-S2
+
+        Q4. Write the following program.
+        (i)    WAP to print 100 random strings whose length between 6 and 8.
+                >>>  import random as r
+        s='qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
+        for x in range(100):
+            S=''.join(r.sample(s,r.randint(6,8)))
+            print(S)
+        (ii)WAP to print all prime numbers between 600 and 800.
+                >>> for val in range(600, 801):
+           if val > 1:
+               for n in range(2,int( val/2) +1):
+                   if (val % n) == 0:
+                       break
+               else:
+                   print(val)
+        (iii)WAP to print all numbers between 100 and 1000 that are divisible by 7 and 9.
+                >>> for x in range(100,1001):
+              if x %7==0 and x %9==0:
+                print(x)
+
+        Q5. WAP to create two lists of 10 random numbers between 10 and 30; Find
+        (i)    Common numbers in the two lists
+
+        >>>      import random as r
+        L1=[]						#create empty list L1
+        L2=[]						#create empty list L2
+        for i in range(10):
+            L1.append(r.randint(10,30))
+        print("list one is:",L1)			#print list L1
+        for j in range(10):
+            L2.append(r.randint(10,30))	#print list L2
+        print("list two is",L2)
+        c=set(L1) & set(L2)  #convert list into set and find common no’s
+
+        print(list(c))					#print c in list form.
+
+        (ii)Unique numbers in both the list
+        >>>      import random as r
+        L1=[]   #create empty list L1
+        L2=[]   #create empty list L2
+        for i in range(10):
+            L1.append(r.randint(10,30))
+        print("list one is:",L1)
+        for j in range(10):
+            L2.append(r.randint(10,30))
+        print("list two is",2)
+        c=set(L1) | set(L2)
+        print(list(c))
+
+        (iii)Minimum in both the list
+
+        >>>  import random as r
+        L1=[]   #create empty list L1
+        L2=[]
+        for i in range(10):
+            L1.append(r.randint(10,30))
+        print("list one is:",L1)
+        for j in range(10):
+            L2.append(r.randint(10,30))
+        print("list two is",2)
+        print(“Minimum number in List 1:”,min(L1)
+        print(“Minimum number in List 2:”,min(L2)
+
+        (iv)Maximum in both the list
+
+        >>>  import random as r
+        L1=[]   #create empty list L1
+        L2=[]
+        for i in range(10):
+        L1.append(r.randint(10,30))
+        print("list one is:",L1)
+        for j in range(10):
+             L2.append(r.randint(10,30))
+        print("list two is",2)
+        print(“Maximum number in List 1:”,max(L1)
+        print(“Maximum number in List 2:”,max(L2)
+
+        (v)Sum of both the lists
+
+        >>> 	l1=[]
+        l2=[]
+        l3=[]
+        for i in range(10):
+            l1.append(r.randint(10,30))
+        print("list one is:",l1)
+        for j in range(10):
+            l2.append(r.randint(10,30))
+        print("list two is",l2)
+        print(“Sum of list 1 and List 2”,L1+L2)
+
+        Q6. WAP to create a list of 100 random numbers between 100 and 900. Count and print the:
+        >>>  import random as r
+        ls=[]
+        for i in range(100):
+             ls.append(r.randint(100,900))
+        print("List is:",ls)
+        (i)All odd numbers
+        >>>  import random as r
+        ls=[]
+        s=0
+        odd=[]
+        for i in range(100):
+             ls.append(r.randint(100,900))
+        print("List is:",ls)
+        for x in range(100):
+             if ls[x] % 2!=0:
+                 odd.append(ls[x])
+                  s=s+ls[x]
+        print("Sum of all Odd numbers:",s)
+        print(“Total odd number:”,len(odd))
+        print(“odd numbers are:”,odd)
+        (ii)All even numbers
+        >>>  import random as r
+        ls=[]
+        s=0
+        for i in range(100):
+             ls.append(r.randint(100,900))
+        print("List is:",ls)
+        for x in range(100):
+             if ls[x] % 2==0:
+                even.append(ls[x])
+                  s=s+ls[x]
+        print("Sum of all Even numbers:",s)
+        print(“Total even numbers”,len(even))
+        print(“Even numbers are:”,even)
+        (iii)All prime numbers
+        >>>  import random as r
+        ls=[]
+        s=0
+        for i in range(100):
+             ls.append(r.randint(100,900))
+        print("List is:",ls)
+        for i in range(100):
+             for x in range(2,(int(ls[i]/2)+1)):
+                  if ls[i] % x==0:
+                       break;
+             else:
+                  s=s+ls[i]
+        print("Sum of all Prime numbers:",s)
+
+        Q7. D is a dictionary defined as D={1:"One",2:"Two",3:"Three",4:"Four", 5:"Five"}.
+               WAP to read all the keys and values from dictionary and write to the file in the given below format.
+            Key1, Value1
+            Key2, Value2
+            Key3, Value3
+            >>>  D={1:"One",2:"Two",3:"Three",4:"Four", 5:"Five"}
+        fh=open('dictionary.txt','w')
+        for x in D:
+            fh.write(str(x))
+            fh.write(' , ')
+            fh.write(str(D[x]))
+            fh.write('\n')
+        fh.close()
+
+        Q8. L is a list defined as L=["One","Two","Three","Four","Five"]
+               WAP to count the length of each element from a list and write to the file in the given below format:
+            One, 3
+            Two, 3
+            Four, 4
+            >>>	fh=open("list.txt",'w')
+        L=["One","Two","Three","Four","Five"]
+        for x in range(5):
+            fh.write(L[x])
+            fh.write(' , ')
+            fh.write(str(len(L[x])))
+            fh.write('\n')
+        fh.close()
+
+        Q9. Write to the file 100 random strings whose length between 10 and 15.
+            >>>  import random as r
+        fh=open('a.py','w')
+        a='qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
+        for i in range(100):
+                A=''.join(r.sample(a,r.randint(10,15)))
+                    fh.write(A)
+                    fh.write('\n')
+        fh.close()
+        Q10. Write to the file all prime numbers between 600 and 800.
+             >>>  fh=open('prime_no.txt','w')
+        for val in range(600, 801):
+           if val > 1:
+               for n in range(2,int( val/2) +1):
+                   if (val % n) == 0:
+                       break
+               else:
+                   fh.write(str(val))
+                   fh.write('\n')
+        fh.close()
+        Q11. WAP to calculate the time taken by a program.
+            >>>  import time
+                 T=tme.time()
+                 #start program
+                    -----------
+                    -----------
+                 #end program
+                 Print(“total time”,time.time()-T)
+                 if l[i] % x==0:
+                     break
+                 else:
+                     s=s+l[i]
+                 print(s)
+        (xi)WAP to clear all the elements in L.
+         Sol: >>> L.clear
+        (xii)WAP to delete L.
+         Sol: >>> del L
+        Q2. D is a dictionary defined as D= {1:5.6, 2:7.8, 3:6.6, 4:8.7, 5:7.7}
+        (i)    WAP to add new entry in D; key=8 and value is 8.8
+        >>> D[8]=8.8
+        (ii)WAP to remove key=2.
+        >>> D.pop(2)
+        (iii)WAP to check weather 6 key is present in D
+        >>> 6 in D
+        (iv)WAP to count the number of elements present in D.
+        >>> len(D)
+        (v) 	WAP to add all the values present D.
+        >>> sum(D.values())
+        (vi)WAP to update the value of 3 to 7.1.
+        >>> D[3]=7.1
+        (vii)WAP to clear the dictionary.
+         >>> D.clear()
+
+        Q3. S1 is a set defined as S1= {10, 20, 30, 40, 50, 60}.
+    </pre>
+</body>
+</html>
